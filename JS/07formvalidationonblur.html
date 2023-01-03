@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="username" id="username" onfocus="focushere(this)" onblur="check(this, 'first', ' Username')">
+        <span id="first"></span>
+        <br><br>
+        <input type="password" name="password" id="password" onfocus="focushere(this)" onblur="check(this, 'second', ' Password')">
+        <span id="second"></span>
+        <br><br>
+        <input type="tel" name="tel" id="tel" onfocus="focushere(this)" onblur="check(this, 'third', ' Mobile')">
+        <span id="third"></span>
+        <br><br>
+        <input type="email" name="email" id="email" onfocus="focushere(this)" onblur="check(this, 'fourth', ' Email')">
+        <span id="fourth"></span>
+        <br><br>
+        <label>Choose Course:</label> 
+                <select class="cousre" name="cousre" onchange="changehere(this, 'fifth')">
+                <option value="React">React</option>
+                <option value="WD">WD</option>
+                <option value="FED">FED</option>
+                <option value="php">php</option>
+            </select>
+        <span id="fifth"></span>
+
+    </form>
+
+</body>
+
+</html>
+<script>
+    function check(a, spnid, msg) {
+        if (a.value == "") {
+            document.getElementById(spnid).innerHTML = "Type Here" + msg
+        }
+        else {
+            document.getElementById(spnid).innerHTML = ""
+
+        }
+    };
+
+
+
+    function focushere(e) {
+        // document.getElementById("username").style.background = "khaki";
+        e.style.background = "khaki"
+        
+    }
+
+
+
+
+    function changehere(e){
+        // e.style.backround = "teal";
+        var x = e.value;
+        document.getElementById('fifth').innerHTML = x;
+    };
+
+    
+</script>
