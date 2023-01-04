@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Array 
+
+        // var a = [10,20,30,40,50];
+        
+        // var b = a.map(test);
+
+        // console.log(b);
+
+        // function test(c) {
+        //     return c * 10;
+        // }
+
+
+        // Object in Array 
+        
+        
+        var a = [
+            {Name : "chetan", Course : "React"},
+            {Name : "Heet", Course : "React"},
+            {Name : "Urvashi", Course : "React"},
+        ];
+
+        var b = a.map(test);
+        console.log(b);
+
+        function test(c){
+            // return c.Name;
+            // return c.Course;
+            return c.Name + " " + c.Course;
+
+        };
+    </script>
+</body>
+</html>
