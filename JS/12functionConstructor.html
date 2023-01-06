@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // use capital alphabet while making constructor function
+        //  so we can diffrentiate between normal function anf constructor function
+
+
+        // in () we are passing values 
+
+        function Name(name, tech){
+            this.name = name;
+            this.tech = tech;
+
+
+            this.work = function(){
+                console.log("Learning React js")
+            }
+        }
+
+        // Every time we call a new object we use new keyword
+
+
+        let name1 = new Name('Chetan', 'React')
+        let name2 = new Name('Heet', 'React')
+
+        name2.tech = 'Reactjs'
+        
+        console.log(name1);
+
+
+        name1.work();
+
+
+        </script>
+</body>
+</html>

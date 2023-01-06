@@ -75,5 +75,60 @@
 
     // RegEx    
 
+
+    function onlyAlpha(e,spnid)
+    {
+        var name = /^[a-zA-Z]+$/
+        if(name.test(e.value))
+        {
+            document.getElementById(spnid).innerText = "";
+        }
+        else{
+            
+            document.getElementById(spnid).style.color="red";
+            document.getElementById(spnid).innerText = "Please Enter only Characters!"
+        }
+    }
+    function pwdCheck(e,spnid)
+    {
+        var pwd = /^[a-zA-z0-9._-]{3,5}$/
+        if(pwd.test(e.value))
+        {
+            document.getElementById(spnid).innerText = "";
+        }
+        else{
+            
+            document.getElementById(spnid).style.color="red";
+            document.getElementById(spnid).innerText = "Please Enter min 3 and max 5 characters!"
+        }
+    }
+    function EmailCheck(e,spnid)
+    {
+        var email = /^([a-z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z]{2,4})+$/
+        if(email.test(e.value))
+        {
+            document.getElementById(spnid).innerText = "";
+        }
+        else{
+            
+            document.getElementById(spnid).style.color="red";
+            document.getElementById(spnid).innerText = "Please EnterValid Email";
+        }
+    }
+    function MobileCheck(e,spnid)
+    {
+        var mobile = /^[0-9]{10}$/
+        if(mobile.test(e.value))
+        {
+            document.getElementById(spnid).innerText = "";
+        }
+        else{
+            
+            document.getElementById(spnid).style.color="red";
+            document.getElementById(spnid).innerText = "Please Enter Valid Mobile Number!";
+        }
+
+    }
+
     
 </script>

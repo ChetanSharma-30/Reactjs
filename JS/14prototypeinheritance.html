@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function batch(name,course)
+    {
+        this.name = name;
+        this.course = course;
+    }
+    batch.prototype.getFullName=function(){
+        return this.name+" "+this.course;
+    }
+    // console.log(batch);
+    function Student(name,course,day,grade)
+    {
+        batch.call(this,name,course);
+        this.day = day;
+        this.grade = grade;
+    }
+    Student.prototype = new batch;
+    var tops = new Student("chetan","WD","Monday","A");
+    // console.log(tops);
+    console.log(tops.getFullName());
+    </script>
+</body>
+</html>

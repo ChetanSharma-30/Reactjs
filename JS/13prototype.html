@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function batch(name,course){
+        this.name = name || "unknown";
+        this.course=course || "unknown";
+        this.complete = '31st';
+    }
+    let batch1 = new batch("chetan","React");
+    // console.log(batch1);
+    // console.log("My name is "+batch1.name+" and My course is "+batch1.course);
+    // console.log(batch("Heet","React"));
+
+    batch.prototype.getFullName=function(){
+        console.log("My name is "+batch1.name+" and My course is "+batch1.course+" and will complete it by "+batch1.complete);
+        return this.name+" "+this.course;
+    }
+    batch.prototype.getFullName();
+    </script>
+</body>
+</html>
