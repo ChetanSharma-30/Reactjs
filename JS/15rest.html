@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+//         let [name1, name2, ...rest] = ["Chetan", "Heet", "urvashi", "of the Tops Tech", "learning React"];
+
+//         // rest is array of items, starting from the 3rd one
+//         // console.log(rest[0]); // urvashi
+//         // console.log(rest[1]); // of the Tops Tech
+//         // console.log(rest.length); // 3
+//         // console.log(rest); // 3
+
+
+//         function sum(x, y, z) {
+//             console.log("value of X : ",x);
+//             console.log("value of Y : ",y);
+//             console.log("value of Z : ",z);
+//             return x + y + z;
+//         }
+
+//         const numbers = [1, 2, 3];
+
+//         // sum(numbers)
+//         // sum(numbers[0],numbers[1],numbers[2])
+//         // sum(...numbers)
+//         // sum(45,1,4578)
+//         // console.log(sum(...numbers));
+//         // expected output: 6
+
+//         console.log(sum.apply(null, numbers));
+// // expected output: 6
+
+
+
+
+    // function sum (num1, num2){
+    //     console.log(num1 + num2);
+    // }
+    // sum(20,30)
+    // sum(20,30,40)
+    // sum(20,30,40,50)
+    sum('Chetan',30,40,50)
+
+
+    // function sum(){
+
+    //     let sum = 0;
+
+    //     // for(let i in arguments){
+    //     for(let i in arguments){
+    //         sum +=arguments[i];
+    //     }
+    //     console.log(sum);
+    // }
+
+
+    function sum(name, ...rest){
+        // document.write(`Hello ${name}: `);
+        console.log(`hello ${name}: `);
+        let sum = 0;
+        for(let i in rest){
+            sum +=rest[i];
+        }
+        // console.log(sum);
+        // console.log(name);
+
+        console.log(sum + '<br>');
+        // document.write(sum + "<br>")
+    }
+
+    </script>
+</body>
+
+</html>

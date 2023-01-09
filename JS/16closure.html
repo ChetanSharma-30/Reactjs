@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Closure in JavaScript</h1>
+    <p>
+      A closure is the combination of a function bundled together (enclosed)
+      with references to its surrounding state (the lexical environment). In
+      other words, a closure gives you access to an outer function's scope from
+      an inner function.
+    </p>
+  </body>
+</html>
+<script>
+  //   function init() {
+  //     var name = "Chetan"; // name is a local variable created by init
+  //     function displayName() {
+  //       // displayName() is the inner function, a closure
+  //       console.log(name); // use variable declared in the parent function
+  //     }
+  //     name = "Sharma";
+  //     return displayName;
+  //   }
+  //   let a = init();
+  //   a();
+
+
+    function returnfucn(){
+
+    
+
+  const fname = () => {
+    let a = "chetan";
+    console.log(a);
+    const lname = () => {
+    // let a = "sharma";
+    console.log(a);
+
+        const course = () => {
+            // let a = "react";
+            console.log(a);
+
+        }
+        course();
+    }
+    a = '007';
+    lname();
+  }
+//   fname();
+  return fname;
+
+}
+
+let a = returnfucn();
+a();
+</script>

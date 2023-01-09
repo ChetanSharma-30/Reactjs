@@ -37,8 +37,21 @@
                 <option value="php">php</option>
             </select>
         <span id="fifth"></span>
+        <br><br>
+        <input type="text" name="uname" id="uname" onkeypress="onlyAlpha(this, 'error1')">
+        <span id="error1"></span>
+        <br><br>
+        <input type="text" name="upass" id="upass" onkeypress="pwdCheck(this, 'error2')">
+        <span id="error2"></span>
+        <br><br>
+        <input type="text" name="uemail" id="uemail" onkeypress="EmailCheck(this, 'error3')">
+        <span id="error3"></span>
+        <br><br>
+        <input type="text" name="umobile" id="umobile" onkeypress="MobileCheck(this, 'error4')">
+        <span id="error4"></span>
 
-    </form>
+
+    </form>+
 
 </body>
 
@@ -73,7 +86,7 @@
 
 
 
-    // RegEx    
+    // Using RegEx form validation 
 
 
     function onlyAlpha(e,spnid)
