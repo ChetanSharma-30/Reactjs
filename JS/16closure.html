@@ -29,33 +29,27 @@
   //   let a = init();
   //   a();
 
-
-    function returnfucn(){
-
-    
-
-  const fname = () => {
-    let a = "chetan";
-    console.log(a);
-    const lname = () => {
-    // let a = "sharma";
-    console.log(a);
+  function returnfucn() {
+    const fname = () => {
+      let a = "chetan";
+      console.log(a);
+      const lname = () => {
+        // let a = "sharma";
+        console.log(a);
 
         const course = () => {
-            // let a = "react";
-            console.log(a);
-
-        }
+          // let a = "react";
+          console.log(a);
+        };
         course();
-    }
-    a = '007';
-    lname();
+      };
+      a = "007";
+      lname();
+    };
+    //   fname();
+    return fname;
   }
-//   fname();
-  return fname;
 
-}
-
-let a = returnfucn();
-a();
+  let a = returnfucn();
+  a();
 </script>
